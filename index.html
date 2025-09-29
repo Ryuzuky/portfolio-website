@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Website</title>
   <link rel="stylesheet" href="style.css">
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.57/build/spline-viewer.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 </head>
@@ -68,9 +69,36 @@
       <a href="#about-me">About Me</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
-      <a href="#resume">Resume</a>
       <a href="#contact-me">Contact Me</a>
     </nav>
   </header>
+  <section class="home" id="home">
+    <spline-viewer url="https://prod.spline.design/79an9zKYadZuv6Ec/scene.splinecode" class="bg-3d" events-target="global"></spline-viewer>
+    <div class="glass-card">
+      <div class="home-content">
+        <h1>Hello, I'm <span><br>Rizky Anugrah Suharto</span></h1>
+        <div class="text-animate">
+          <h3>
+            <span>Fullstack</span> <span>Developer</span>
+          </h3>
+        </div>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolores doloribus earum error architecto aliquam, esse suscipit quidem asperiores, iure ipsam corrupti facilis neque. Consectetur delectus nostrum, vel enim ea incidunt.
+        </p>
+        <div class="btn-secondary">
+          <a href="" class="btn"><i class="ri-file-pdf-2-line"></i>Check My CV</a>
+          <div class="btn-social">
+            <a href="#"><i class="ri-linkedin-fill"></i></i></a>
+            <a href="#"><i class="ri-github-fill"></i></a>
+            <a href="#"><i class="ri-mail-fill"></i></a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <div class="profile-img">
+      <img class="profile-pic" src="profile-pic.png">
+    </div>
+  </section>
 </body>
 </html>
