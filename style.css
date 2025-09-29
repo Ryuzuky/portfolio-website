@@ -47,17 +47,6 @@ header {
   z-index: 1;
 }
 
-.bg-3d {
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 90%;
-  z-index: -1;
-  display: block;
-  transform: scale(1.25);
-  pointer-events: auto;
-}
-
 .logo{
   color: var(--color-accent);
   width: 15rem;
