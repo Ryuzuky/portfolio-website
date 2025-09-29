@@ -21,3 +21,66 @@
   --color-text-light: #fffcde;
   --color-glow: #00ffdd;
 }
+
+::selection {
+  background-color: var(--color-muted);
+}
+
+html {
+  font-size: 65%;
+  overflow-x: hidden;
+}
+
+body{
+  background-color: var(--color-bg);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 100px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 6px #000000ca ;
+  z-index: 10;
+  
+}
+
+.logo{
+  color: var(--color-accent);
+  width: 13rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Goldman', sans-serif;
+}
+
+.navbar a {
+  position: relative;
+  color: var(--color-accent);
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 0;
+  margin: 0 15px;
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent);
+  bottom: 0;
+  left: 50%;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover::after, .navbar a.active::after{
+  width: 100%;
+  left: 0;
+}
