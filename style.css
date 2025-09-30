@@ -252,57 +252,22 @@ section {
 
 .profile-img-container {
   position: relative;
-}
-
-
-.profile-frame {
-  position: absolute;
-  width: 450px;
-  height: 450px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: var(--color-primary);
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.profile-frame::before{
-  content: "";
-  position: absolute;
-  inset: -10px 140px;
-  background: linear-gradient(to top, var(--color-glow) 10%, var(--color-accent) 90%);
-  transition: 0.5s;
-  animation: imageFrame 4s linear infinite;
-  user-select: none;
-}
-
-.profile-frame::after {
-  content: "";
-  position: absolute;
-  inset: 6px;
-  background-color: var(--color-bg);
-  border-radius: 50%;
-  z-index: 1;
-}
-
-@keyframes imageFrame {
-  0% { transform: rotate(0deg); }
-  0% { transform: rotate(360deg); }
+  width: 380px;
+  height: 380px;
+  min-width: 380px;
 }
 
 .profile-img {
-  position: relative;
   flex-shrink: 0;
-  width: 380px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
   z-index: 2;
-  border: 6px solid var(--color-primary);
+  border: 4px solid var(--color-primary);
 }
 
 .profile-wrapper {
+  position: relative;
   width: 100%;
   height: 120%;
   display: flex;
@@ -314,6 +279,32 @@ section {
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.spin-glow {
+  position: absolute;
+  inset: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid white;
+  border-right: 4px solid white;
+  filter: 
+    drop-shadow(0 0 5px var(--color-glow))
+    drop-shadow(0 0 25px var(--color-glow))
+    drop-shadow(0 0 50px var(--color-glow));
+  animation: spin 8s linear infinite;
+  user-select: none;
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 .about-me {
@@ -351,62 +342,57 @@ section {
 
 .about-me-img-container {
   position: relative;
-  width: 25rem;
-  height: 25rem;
-}
-
-.about-me-img {
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  overflow: hidden;
-  z-index: 2;
-  border: 4px solid var(--color-primary);
-}
-
-.img-wrapper {
-  position: relative;
-  width: 100%;
-  height: 120%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 312px;
+  height: 315px;
+  margin: 0 auto;
 }
 
 .about-me-pic {
-  width: 100%;
-  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
   object-fit: cover;
 }
 
-.spin-glow {
-  position: absolute;
-  inset: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  width: 30rem;
-  height: 30rem;
-  border-radius: 50%;
-  border-top: 4px solid transparent;
-  border-bottom: 4px solid transparent;
-  border-left: 4px solid white;
-  border-right: 4px solid white;
-  filter: 
-    drop-shadow(0 0 5px var(--color-glow))
-    drop-shadow(0 0 25px var(--color-glow))
-    drop-shadow(0 0 50px var(--color-glow));
-  animation: spin 8s linear infinite;
-  user-select: none;
+.about-me-pic:nth-child(1) {
+  clip-path: polygon(30% 0, 0 0, 0 30%);
+  transform: translateY(-1.25rem);
 }
 
-@keyframes spin {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to   { transform: translate(-50%, -50%) rotate(360deg); }
+.about-me-pic:nth-child(2) {
+  clip-path: polygon(30% 0, 65% 0, 0 65%, 0 30%);
+  transform: translateY(-0.75rem);
+}
+
+.about-me-pic:nth-child(3) {
+  clip-path: polygon(100% 20%, 65% 0, 0 65%, 20% 100%);
+  transform: translateY(-0.25rem);
+}
+
+.about-me-pic:nth-child(4) {
+clip-path: polygon(100% 20%, 100% 0, 65% 0);
+transform: translateY(-0.66rem);
+}
+
+.about-me-pic:nth-child(5) {
+clip-path: polygon(20% 100%, 0 65%, 0 100%);
+transform: translateY(0.5rem);
+}
+
+.about-me-pic:nth-child(6) {
+  clip-path: polygon(100% 20%, 100% 70%, 70% 100%, 20% 100%);
+  transform: translateY(0.25rem);
+}
+
+.about-me-pic:nth-child(7) {
+  clip-path: polygon(100% 70%, 70% 100%, 100% 100%);
+  transform: translateY(0.75rem);
 }
 
 .about-me-content {
   text-align: center;
-  padding-top: 6rem;
+  padding-top: 3rem;
 }
 
 .about-me-content h3 {
