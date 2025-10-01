@@ -51,6 +51,13 @@ header {
   z-index: 10;
 }
 
+section {
+  min-height: 100vh;
+  padding: 8rem 10rem 2rem;
+  color: var(--color-text-light);
+  font-size: 2rem;
+}
+
 .logo{
   color: var(--color-accent);
   width: 13rem;
@@ -90,13 +97,6 @@ header {
   color: var(--color-accent);
   cursor: pointer;
   display: none;
-}
-
-section {
-  min-height: 100vh;
-  padding: 2rem 10rem 2rem;
-  color: var(--color-text-light);
-  font-size: 2rem;
 }
 
 .home {
@@ -438,4 +438,29 @@ span {
 
 .info-desc {
   color: var(--color-text-light);
+}
+
+.stats-item {
+  font-weight: 500;
+}
+
+.stats-no {
+  font-size: 6rem;
+  color: var(--color-glow);
+}
+
+p.stats-desc {
+  margin: 0 0 2rem ;
+  padding-left: 5rem;
+  position: relative;
+}
+
+p.stats-desc::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 0;
+  width: 35px;
+  height: 3px;
+  background-color: var(--color-accent);
 }
