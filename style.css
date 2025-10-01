@@ -353,41 +353,31 @@ section {
   left: 0;
   height: 100%;
   object-fit: cover;
+  transition: all .3s ease;
 }
 
 .about-me-pic:nth-child(1) {
-  clip-path: polygon(30% 0, 0 0, 0 30%);
+  clip-path: polygon(0 0,0 32%, 28% 0);
   transform: translateY(-1.25rem);
 }
 
 .about-me-pic:nth-child(2) {
-  clip-path: polygon(30% 0, 65% 0, 0 65%, 0 30%);
+  clip-path: polygon(28% 0, 0 32%, 0 100%, 17% 100%, 90% 0);
   transform: translateY(-0.75rem);
 }
 
 .about-me-pic:nth-child(3) {
-  clip-path: polygon(100% 20%, 65% 0, 0 65%, 20% 100%);
+  clip-path: polygon(100% 0, 100% 65%, 74% 100%, 17% 100%, 90% 0);
   transform: translateY(-0.25rem);
 }
 
 .about-me-pic:nth-child(4) {
-clip-path: polygon(100% 20%, 100% 0, 65% 0);
-transform: translateY(-0.66rem);
+clip-path: polygon(100% 65%, 74% 100%, 100% 100%);
+transform: translateY(0.25rem);
 }
 
-.about-me-pic:nth-child(5) {
-clip-path: polygon(20% 100%, 0 65%, 0 100%);
-transform: translateY(0.5rem);
-}
-
-.about-me-pic:nth-child(6) {
-  clip-path: polygon(100% 20%, 100% 70%, 70% 100%, 20% 100%);
-  transform: translateY(0.25rem);
-}
-
-.about-me-pic:nth-child(7) {
-  clip-path: polygon(100% 70%, 70% 100%, 100% 100%);
-  transform: translateY(0.75rem);
+.about-me-img-container:hover .about-me-pic {
+  transform: translateY(0);
 }
 
 .about-me-content {
