@@ -1,0 +1,55 @@
+.skills {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--color-bg);
+}
+
+.skills::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: 
+    linear-gradient(
+      to top, 
+      rgba(0, 16, 16, 1) 0%,
+      rgba(0, 16, 16, 0.9) 40%,
+      rgba(0, 16, 16, 0) 100%
+    );
+  opacity: 100%;
+}
+
+.skill-list {
+  position: relative;
+  white-space: nowrap;
+} 
+
+.skill-slide {
+  display: inline-block;
+  white-space: nowrap;
+  user-select: none;
+  width: max-content;
+  animation: slide 44s infinite linear;
+}
+
+@keyframes slide {
+  from { transform: translateX(50%); }
+  to   { transform: translateX(-50%); }
+}
+
+.skill-slide span {
+  color: var(--color-text-light);
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 0 2rem;
+  text-shadow: 
+    0 0 10px var(--color-glow), 
+    0 0 20px var(--color-glow),
+    0 0 40px var(--color-glow)
+  ;
+}
