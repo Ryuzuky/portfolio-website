@@ -1,11 +1,11 @@
 .about-me {
   display: flex;
   position: relative;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 2rem;
   background-color: #031e23;
+  padding-bottom: 16rem;
 }
 
 .about-me::before {
