@@ -36,6 +36,10 @@ body{
   overflow-x: hidden;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
 section {
   min-height: 100vh;
   padding: 8rem 10rem 2rem;
