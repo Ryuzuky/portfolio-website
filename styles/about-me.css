@@ -143,8 +143,8 @@ transform: translateY(0.25rem);
 }
 
 .info-desc a {
-  color: inherit;        /* ikut warna dari parent */
-  text-decoration: none; /* hilangin underline default */
+  color: inherit;
+  text-decoration: none;
 }
 
 h2.open-quotes {
