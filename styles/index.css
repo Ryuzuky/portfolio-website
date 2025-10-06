@@ -46,3 +46,8 @@ section {
   color: var(--color-text-light);
   font-size: 2rem;
 }
+
+span {
+  color: var(--color-accent);
+  font-weight: 600;
+}

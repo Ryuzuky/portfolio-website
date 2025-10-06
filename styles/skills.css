@@ -59,27 +59,58 @@
   display: flex;
   flex-direction: row;
   max-width: 100%;
+  margin-bottom: 8rem;
 }
 
 .card-skill-header {
+  display: flex;
+  flex-direction: column;
   position: relative;
   width: 350px;
   height: 478px;
   border-radius: 25px;
+  padding: 3rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
   border: 3px solid transparent;
   background: 
     linear-gradient(#001010, #001010) padding-box, 
     linear-gradient(315deg,rgba(246, 223, 142, 1) 20%, rgba(0, 255, 221, 1) 100%) border-box;
 }
 
-.card-skill-list {
+.card-skill-header ul {
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.card-skill-header li::marker {
+  color: var(--color-glow);
+}
+
+.card-skill-list-scroll {
   position: relative;
+  overflow: hidden;
+}
+
+.card-skill-list-scroll::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 8px;
+  height: 420px;
+  border-radius: 8px;
+  background: linear-gradient(to top,rgba(246, 223, 142, 1) 20%, rgba(0, 255, 221, 1) 100%);
+  box-shadow: -1rem 0 3rem 2rem var(--color-bg);
+}
+
+.card-skill-list {
   background-color: transparent;
   display: flex;
   padding: 4rem 0 2.5rem 2.5rem;
   overflow-x: auto;
-  overflow-y: hidden;
-  max-width: 70%;
 }
 
 .card-skill-list::-webkit-scrollbar {
@@ -97,23 +128,12 @@
   border-radius: 10px;
 }
 
-.card-skill-list::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  right: 0;
-  width: 8px;
-  height: 420px;
-  border-radius: 8px;
-  background: linear-gradient(to top,rgba(246, 223, 142, 1) 20%, rgba(0, 255, 221, 1) 100%);
-  box-shadow: -1rem 0 3rem 2rem var(--color-bg);
-}
-
 .card-skill{
   display: flex;
   position: relative;
   height: 399px;
   border-radius: 30px;
+  flex-shrink: 0;  
   background: transparent;
   box-shadow: -1rem 0 3rem 2rem var(--color-bg);
   user-select: none;
@@ -136,4 +156,3 @@
   width: 285px;
   height: 399px;
 }
-

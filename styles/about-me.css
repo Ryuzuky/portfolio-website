@@ -85,10 +85,6 @@ transform: translateY(0.25rem);
   margin: 2rem 0 3rem;
 }
 
-span {
-  color: var(--color-accent);
-}
-
 .about-me-card { 
   display: flex;
   gap: 1rem;
