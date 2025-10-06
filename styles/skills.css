@@ -146,6 +146,7 @@
 .card-skill img {
   width: 285px;
   height: 399px;
+  cursor: pointer;
 }
 
 .card-cert-header {
@@ -212,7 +213,7 @@
   border-radius: 30px;
   flex-shrink: 0;  
   background: transparent;
-  box-shadow: -1rem 0 3rem 2rem var(--color-bg);
+  box-shadow: -1rem 0 3rem var(--color-bg);
   user-select: none;
   transition: .2s;
 }
@@ -233,6 +234,7 @@
   width: 636px;
   height: 399px;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 .overlay {
@@ -251,4 +253,8 @@
   max-height: 90%;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.no-scroll {
+  overflow: hidden !important;
 }
