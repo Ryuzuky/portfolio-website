@@ -1,38 +1,59 @@
+// Navbar
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll("header nav a");
+
+window.onscroll = () => {
+  sections.forEach(sec => {
+    let top = window.scrollY;
+    let offset = sec.offsetTop - 100;
+    let height = sec.offsetHeight;
+    let id = sec.getAttribute("id");
+    
+    if (top >= offset && top < offset + height) {
+      navLinks.forEach(links => {
+        links.classList.remove("active");
+        document.querySelector("header nav a[href*=" + id + "]").classList.add("active");
+      })
+    }
+  })
+}
+
+// Skills Section
 var dupe = document.querySelector(".skill-slide").cloneNode(true);
 document.querySelector(".skill-list").appendChild(dupe);
 
-const certImages = document.querySelectorAll('.card-cert img');
-const overlay    = document.getElementById('overlay');
-const popupImg   = document.getElementById('popupImg');
+const certImages = document.querySelectorAll(".card-cert img");
+const overlay    = document.getElementById("overlay");
+const popupImg   = document.getElementById("popupImg");
 
 function disableScroll() {
-  document.body.classList.add('no-scroll');
-  document.documentElement.classList.add('no-scroll');
+  document.body.classList.add("no-scroll");
+  document.documentElement.classList.add("no-scroll");
 }
 
 function enableScroll() {
-  document.body.classList.remove('no-scroll');
-  document.documentElement.classList.remove('no-scroll');
+  document.body.classList.remove("no-scroll");
+  document.documentElement.classList.remove("no-scroll");
 }
 
 certImages.forEach(img => {
-  img.addEventListener('click', () => {
+  img.addEventListener("click", () => {
     popupImg.src = img.src;
-    overlay.style.display = 'flex';
+    overlay.style.display = "flex";
     disableScroll();
   });
 });
 
-overlay.addEventListener('click', (e) => {
+overlay.addEventListener("click", (e) => {
   if (e.target === overlay) {
-    overlay.style.display = 'none';
+    overlay.style.display = "none";
     enableScroll();
   }
 });
 
-document.addEventListener('keydown', (e) => {
+document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
-    overlay.style.display = 'none';
+    overlay.style.display = "none";
     enableScroll();
   }
 });
