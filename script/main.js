@@ -1,6 +1,16 @@
-// Navbar
+// Navbar Section
+const menuIcon = document.querySelector("#menu-icon");
+const navbar = document.querySelector(".navbar");
+const navbg = document.querySelector(".nav-bg");
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("header nav a");
+
+menuIcon.onclick = () => {
+  menuIcon.classList.toggle("ri-menu-3-line");
+  menuIcon.classList.toggle("ri-close-line");
+  navbar.classList.toggle("active");
+  navbg.classList.toggle("active");
+}
 
 window.onscroll = () => {
   sections.forEach(sec => {
@@ -17,6 +27,15 @@ window.onscroll = () => {
     }
   })
 }
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navbar.classList.remove("active");
+    navbg.classList.remove("active");
+    menuIcon.classList.add("ri-menu-3-line");
+    menuIcon.classList.remove("ri-close-line");
+  });
+});
 
 // Skills Section
 var dupe = document.querySelector(".skill-slide").cloneNode(true);

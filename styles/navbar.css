@@ -4,7 +4,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px 100px;
+  padding: 2rem 10rem;
   background-color: #0000005d;
   display: flex;
   justify-content: space-between;
@@ -48,9 +48,51 @@ header {
   left: 0;
 }
 
-.menu-icon {
+#menu-icon {
   font-size: 3.6rem;
   color: var(--color-accent);
   cursor: pointer;
   display: none;
+}
+
+@media (max-width: 1080px) {
+  #menu-icon {
+    display: block;
+  }
+
+  header {
+    padding: 2rem 3rem;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    width: 100%;
+    padding: 0 3rem;
+    transition: left .25s ease;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 1.8rem;
+    margin: 3rem 0;
+  }
+
+  .nav-bg {
+    position: fixed;
+    top: 8rem;
+    left: -100%;
+    width: 100%;
+    height: 427.2px;
+    background-color: #0000005d;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 6px #000000ca;
+    z-index: 2;
+    transition: left .25s ease;
+  }
+
+  .navbar.active, .nav-bg.active {
+    left: 0;
+  }
 }

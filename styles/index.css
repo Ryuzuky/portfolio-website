@@ -36,9 +36,6 @@ body{
   overflow-x: hidden;
 }
 
-html::-webkit-scrollbar {
-  display: none;
-}
 
 section {
   min-height: 100vh;
@@ -50,4 +47,10 @@ section {
 span {
   color: var(--color-accent);
   font-weight: 600;
+}
+
+@media (max-width: 1080px) {
+  section {
+    padding: 10rem 3rem 2rem;
+  }
 }
