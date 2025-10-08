@@ -165,6 +165,10 @@ h2.close-quotes {
   padding: 2rem;
 }
 
+.card.statistics {
+  height: 100%;
+}
+
 .stats-item {
   font-weight: 500;
 }
@@ -189,4 +193,45 @@ p.stats-desc::before {
   width: 35px;
   height: 3px;
   background-color: var(--color-accent);
+}
+
+@media (max-width: 920px) {
+  .about-me-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-cards, .right-card {
+    display: contents;
+  }
+
+  .card.personal-info{
+    order: 1;
+  }
+
+  .card.statistics {
+    order: 2;
+    justify-content: center;
+  }
+
+  .card.quotes {
+    order: 3;
+  }
+
+  .stats-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 805px) {
+  .info-list, .stats-list{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stats-desc br {
+    display: none;
+  }
 }
