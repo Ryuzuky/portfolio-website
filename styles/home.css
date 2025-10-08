@@ -2,17 +2,14 @@
 .home {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 15rem;
+  justify-content: space-between;
 }
 
 .home-content {
   display: flex;
   flex-direction: column;
+  max-width: 72rem;
   position: relative;
-  max-width: 75rem;
-  margin-top: 5rem;
-  padding: 2rem 4rem;
 }
 
 .home-content h1 {
@@ -24,7 +21,6 @@
 
 .home-content .text-animate {
   position: relative;
-  width: 52rem;
   color: #006262;
   user-select: none;
 }
@@ -162,7 +158,6 @@
 }
 
 .profile-img {
-  flex-shrink: 0;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
@@ -209,4 +204,29 @@
 @keyframes spin {
   from { transform: translate(-50%, -50%) rotate(0deg); }
   to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@media (max-width: 1200px) {
+  .home {
+    display: flex;
+    flex-direction: column;
+    max-width: 72rem;
+    position: relative;
+    gap: 4rem;
+  }
+
+  .profile-img-container {
+    margin-top: 3rem;
+    order: 1;
+  }
+
+  .home-content {
+    order: 2;
+    margin: 1rem 0 10rem;
+    text-align: center;
+  }
+
+  .btn-primary {
+    justify-content: center;
+  }
 }
