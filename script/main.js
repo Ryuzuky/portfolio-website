@@ -41,6 +41,7 @@ navLinks.forEach(link => {
 var dupe = document.querySelector(".skill-slide").cloneNode(true);
 document.querySelector(".skill-list").appendChild(dupe);
 
+const skillImages = document.querySelectorAll(".card-skill img");
 const certImages = document.querySelectorAll(".card-cert img");
 const overlay    = document.getElementById("overlay");
 const popupImg   = document.getElementById("popupImg");
@@ -54,6 +55,14 @@ function enableScroll() {
   document.body.classList.remove("no-scroll");
   document.documentElement.classList.remove("no-scroll");
 }
+
+skillImages.forEach(img => {
+  img.addEventListener("click", () => {
+    popupImg.src = img.src;
+    overlay.style.display = "flex";
+    disableScroll();
+  });
+});
 
 certImages.forEach(img => {
   img.addEventListener("click", () => {
