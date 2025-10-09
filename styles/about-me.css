@@ -144,7 +144,7 @@ transform: translateY(0.25rem);
 
 .info-desc a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 h2.open-quotes {
@@ -166,10 +166,13 @@ h2.close-quotes {
 }
 
 .card.statistics {
+  display: grid;
+  align-items: center;
   height: 100%;
 }
 
 .stats-item {
+  margin: 2rem 0 2rem ;
   font-weight: 500;
 }
 
@@ -180,7 +183,7 @@ h2.close-quotes {
 }
 
 p.stats-desc {
-  margin: 0 0 4rem ;
+  margin: 0;
   padding-left: 5rem;
   position: relative;
 }
@@ -210,8 +213,8 @@ p.stats-desc::before {
   }
 
   .card.statistics {
+    display: block;
     order: 2;
-    justify-content: center;
   }
 
   .card.quotes {
