@@ -153,6 +153,7 @@
 
 .profile-img-container {
   position: relative;
+  flex-shrink: 0;
   width: 380px;
   height: 380px;
 }
@@ -230,7 +231,7 @@
   }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 480px) {
   .profile-img-container {
     width: 240px;
     height: 240px;
