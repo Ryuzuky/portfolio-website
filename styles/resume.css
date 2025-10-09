@@ -25,3 +25,36 @@
   opacity: 100%;
   z-index: 1;
 }
+
+.resume-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.resume-content .timestamp {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  color: var(--color-glow);
+}
+
+.resume-content h4 {
+  margin: 1rem 0;
+  font-size: 2rem;
+}
+
+.resume-content p{
+  margin: 1rem 0;
+  font-size: 1.6rem;
+}
+
+.education {
+  max-width: 33%;
+}
+
+.education-box {
+  padding: 2rem;
+  border: 3px solid var(--color-glow);
+  border-radius: 10px;
+}
