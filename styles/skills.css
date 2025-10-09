@@ -201,6 +201,7 @@
 
 .card-cert-list::-webkit-scrollbar {
   height: 8px;
+  width: 8px;
 }
 
 .card-cert-list::-webkit-scrollbar-thumb {
