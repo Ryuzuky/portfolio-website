@@ -155,7 +155,6 @@
   position: relative;
   width: 380px;
   height: 380px;
-  min-width: 380px;
 }
 
 .profile-img {
@@ -228,5 +227,34 @@
 
   .btn-primary {
     justify-content: center;
+  }
+}
+
+@media (max-width: 460px) {
+  .profile-img-container {
+    width: 240px;
+    height: 240px;
+  }
+
+  .spin-glow {
+    width: 300px;
+    height: 300px;
+  }
+
+  .btn-primary {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 3rem;
+  }
+  
+  .btn-primary .btn {
+    height: 52px;
+    width: 230px;
+    order: 1;
+  }
+
+  .home-content p {
+    margin: 2rem 0 2rem;
   }
 }

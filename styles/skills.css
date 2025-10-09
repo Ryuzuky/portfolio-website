@@ -314,7 +314,8 @@
     padding: 2.5rem 0 2.5rem;
   }
 
-  .card-skill:hover, .card-skill:hover~.card-skill, .card-skill:not(:first-child), .card-cert:hover, .card-cert:hover~.card-cert, .card-cert:not(:first-child) {
+  .card-skill:hover, .card-skill:hover~.card-skill, .card-skill:not(:first-child), 
+  .card-cert:hover, .card-cert:hover~.card-cert, .card-cert:not(:first-child) {
     transform: none !important;
     margin-left: none !important;
   }
