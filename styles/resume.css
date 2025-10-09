@@ -1,0 +1,27 @@
+.resume {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #031e23;
+  padding-bottom: 16rem;
+}
+
+.resume::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: 
+    linear-gradient(
+      to top, 
+      rgba(3, 30, 35, 1) 0%,
+      rgba(3, 30, 35, 0.9) 40%,
+      rgba(3, 30, 35, 0) 100%
+    );
+  opacity: 100%;
+  z-index: 1;
+}
