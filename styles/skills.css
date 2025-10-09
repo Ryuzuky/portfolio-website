@@ -88,7 +88,7 @@
 .card-skill-list-scroll::after {
   content: "";
   position: absolute;
-  top: 30px;
+  top: 32px;
   right: 0;
   width: 8px;
   height: 420px;
@@ -100,7 +100,7 @@
 .card-skill-list {
   background-color: transparent;
   display: flex;
-  padding: 4rem 0 2.5rem 2.5rem;
+  padding: 4rem 0 2.8rem 2.5rem;
   max-width: 968px;
   overflow-x: auto;
 }
@@ -182,7 +182,7 @@
 .card-cert-list-scroll::after {
   content: "";
   position: absolute;
-  top: 30px;
+  top: 32px;
   left: 0;
   width: 8px;
   height: 420px;
@@ -194,7 +194,7 @@
 .card-cert-list {
   background-color: transparent;
   display: flex;
-  padding: 4rem 2.5rem 2.5rem 0;
+  padding: 4rem 2.8rem 2.5rem 0;
   max-width: 968px;
   overflow-x: auto;
 }
@@ -287,13 +287,13 @@
   }
 
   .card-skill-list-scroll::after, .card-cert-list-scroll::after {
-    top: 12px;
+    top: 16px;
   }
 
   .card-skill-list-scroll::before {
     content: "";
     position: absolute;
-    top: 12px;
+    top: 16px;
     left: 0;
     width: 8px;
     height: 420px;
@@ -306,7 +306,7 @@
   .card-cert-list-scroll::before {
     content: "";
     position: absolute;
-    top: 12px;
+    top: 16px;
     right: 0;
     width: 8px;
     height: 420px;
