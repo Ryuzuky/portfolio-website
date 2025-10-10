@@ -3,7 +3,7 @@
   position: relative;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 0;
   background-color: #031e23;
   padding-bottom: 16rem;
 }
@@ -31,18 +31,24 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  gap: 6rem;
+  gap: 3rem;
 }
 
 .resume-title {
-  margin: 2rem 2rem 2rem 3rem;
+  margin: 2rem 0 2rem 3rem;
 }
 
-.education, .work-experience {
-  max-width: 33%;
+.education, .work-experience, .org-experience {
+  min-width: 31%;
 }
 
-.education-box::before, .work-experience-box::before {
+.education-content, .work-experience-content, .org-experience-content {
+  position: relative;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-glow);
+}
+
+.education-box::before, .work-experience-box::before, .org-experience-box::before {
   content: "";
   position: absolute;
   top: -.3rem;
@@ -53,34 +59,34 @@
   background-color: var(--color-glow);
 }
 
-.education-box, .work-experience-box {
+.education-box, .work-experience-box, .org-experience-box {
+  display: flex;
+  flex-direction: column;
   position: relative;
   margin: 2rem;
   padding: 1rem 2rem;
   border: 3px solid var(--color-glow);
   border-radius: 10px;
-  min-height: 353px;
-}
-
-.education-content, .work-experience-content {
-  position: relative;
-  padding-left: 1rem;
-  border-left: 2px solid var(--color-glow);
+  min-height: 250px;
 }
 
 .timestamp {
   margin: 1rem 0;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: var(--color-glow);
 }
 
-.education-title, .work-experience-title {
+.education-title, .work-experience-title, .org-experience-title {
+  display: flex;
+  align-items: center;
   font-size: 2rem;
   color: var(--color-accent);
+  min-height: 54px;
+  margin-bottom: 1rem;
 }
 
-.education-institution, .work-experience-company {
+.education-institution, .work-experience-company, .org-experience-name {
   font-weight: 400;
   font-size: 1.6rem;
   color: var(--color-accent);
@@ -91,3 +97,16 @@
   font-size: 1.6rem;
 }
 
+.education-detail, .work-experience-detail, .org-experience-detail {
+  display: none;
+}
+
+.btn.show-details {
+  margin-top: auto;
+  align-self: flex-end;
+  font-size: 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--color-text-light);
+}
