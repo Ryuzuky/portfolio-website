@@ -85,3 +85,16 @@ document.addEventListener("keydown", (e) => {
     enableScroll();
   }
 });
+
+// Resume Section
+document.querySelectorAll(".show-details").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const box = btn.closest(".education-box, .work-experience-box, .org-experience-box");
+    const detail = box.querySelector(".education-detail, .work-experience-detail, .org-experience-detail");
+    const shown = detail.classList.toggle("shown");
+
+    box.classList.toggle("expanded", shown);
+
+    btn.textContent = shown ? "Hide details <<" : "Show details >>";
+  });
+});

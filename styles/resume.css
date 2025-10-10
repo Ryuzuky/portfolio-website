@@ -42,7 +42,7 @@
 }
 
 .education, .work-experience, .org-experience {
-  min-width: 31%;
+  min-width: 33%;
 }
 
 .education-content, .work-experience-content, .org-experience-content {
@@ -71,6 +71,13 @@
   border: 3px solid var(--color-glow);
   border-radius: 10px;
   min-height: 250px;
+  transition: min-height .5s ease;
+}
+
+.education-box.expanded,
+.work-experience-box.expanded,
+.org-experience-box.expanded {
+  min-height: 480px;
 }
 
 .timestamp {
@@ -95,17 +102,26 @@
   color: var(--color-accent);
 }
 
-.resume-content p{
+.education-detail,
+.work-experience-detail,
+.org-experience-detail {
   margin: 1.5rem 0;
   font-size: 1.6rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height .5s ease, opacity .5s ease;
 }
 
-.education-detail, .work-experience-detail, .org-experience-detail {
-  display: none;
+.education-detail.shown,
+.work-experience-detail.shown,
+.org-experience-detail.shown {
+  max-height: 240px;
+  opacity: 1;
 }
 
 .btn.show-details {
-  margin-top: auto;
+  margin: auto 0 1rem;
   align-self: flex-end;
   font-size: 1.6rem;
   font-weight: 600;
