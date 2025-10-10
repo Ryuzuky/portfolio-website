@@ -31,39 +31,41 @@
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+  gap: 6rem;
 }
 
 .resume-title {
   margin: 2rem 2rem 2rem 3rem;
 }
 
-.education {
+.education, .work-experience {
   max-width: 33%;
 }
 
-.education-content {
-  position: relative;
-  padding-left: 1rem;
-  border-left: 2px solid var(--color-glow);
+.education-box::before, .work-experience-box::before {
+  content: "";
+  position: absolute;
+  top: -.3rem;
+  left: -4.3rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--color-glow);
 }
 
-.education-box::before {
-    content: "";
-    position: absolute;
-    top: -.3rem;
-    left: -4.4rem;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    background-color: var(--color-glow);
-  }
-
-.education-box {
+.education-box, .work-experience-box {
   position: relative;
   margin: 2rem;
   padding: 1rem 2rem;
   border: 3px solid var(--color-glow);
   border-radius: 10px;
+  min-height: 353px;
+}
+
+.education-content, .work-experience-content {
+  position: relative;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-glow);
 }
 
 .timestamp {
@@ -73,12 +75,12 @@
   color: var(--color-glow);
 }
 
-.education-title {
+.education-title, .work-experience-title {
   font-size: 2rem;
   color: var(--color-accent);
 }
 
-.education-institution {
+.education-institution, .work-experience-company {
   font-weight: 400;
   font-size: 1.6rem;
   color: var(--color-accent);
