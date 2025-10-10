@@ -35,7 +35,10 @@
 }
 
 .resume-title {
-  margin: 2rem 0 2rem 3rem;
+  display: flex;
+  margin: 0 0 2rem 3rem;
+  align-items: flex-end;
+  min-height: 64px;
 }
 
 .education, .work-experience, .org-experience {
