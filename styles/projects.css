@@ -1,0 +1,23 @@
+.projects {
+  display: flex;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 16rem;
+}
+
+.project-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  gap: 3rem;
+}
+
+
+.project-card {
+  padding: 3rem 4rem;
+  background-color: var(--color-secondary);
+  border-radius: 2rem;
+  text-align: left;
+}
