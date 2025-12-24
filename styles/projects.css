@@ -14,10 +14,30 @@
   gap: 3rem;
 }
 
-
 .project-card {
-  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
   background-color: var(--color-secondary);
   border-radius: 2rem;
   text-align: left;
+}
+
+.project-card-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  color: var(--color-accent);
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+}
+
+.project-desc {
+  font-size: 1.6rem;
+  margin-top: auto;
 }
